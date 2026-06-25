@@ -1,0 +1,8 @@
+torch>=2.0
+torchvision>=0.15
+matplotlib
+seaborn
+scikit-learn
+tqdm
+pillow
+numpy

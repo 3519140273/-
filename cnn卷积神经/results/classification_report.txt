@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+          圆形     0.9979    0.9897    0.9938       484
+          方形     0.9904    0.9981    0.9942       516
+
+    accuracy                         0.9940      1000
+   macro avg     0.9942    0.9939    0.9940      1000
+weighted avg     0.9940    0.9940    0.9940      1000
