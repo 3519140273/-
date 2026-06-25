@@ -1,0 +1,3 @@
+<launch>
+  <node name="map_saver" pkg="map_server" type="map_saver" args="-f $(find my_robot)/maps/my_map"><param name="occ_thresh" value="0.65"/></node>
+</launch>

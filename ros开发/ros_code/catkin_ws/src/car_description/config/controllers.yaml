@@ -1,0 +1,24 @@
+car:
+  left_rear_wheel_joint:
+    type: effort_controllers/JointVelocityController
+    joint: left_rear_wheel_joint
+    pid: {p: 100.0, i: 0.0, d: 0.0}
+
+  right_rear_wheel_joint:
+    type: effort_controllers/JointVelocityController
+    joint: right_rear_wheel_joint
+    pid: {p: 100.0, i: 0.0, d: 0.0}
+
+  left_front_steering_joint:
+    type: effort_controllers/JointPositionController
+    joint: left_front_steering_joint
+    pid: {p: 100.0, i: 0.0, d: 0.0}
+
+  right_front_steering_joint:
+    type: effort_controllers/JointPositionController
+    joint: right_front_steering_joint
+    pid: {p: 100.0, i: 0.0, d: 0.0}
+
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50

@@ -1,0 +1,18 @@
+<sdf version="1.6">
+  <world name="car_world">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <!-- 红色立方体（摄像头取景参照物） -->
+    <model name="block">
+      <static>true</static>
+      <pose>2 0 0.1 0 0 0</pose>
+      <link name="link">
+        <visual>
+          <geometry><box size="1 1 1"/></geometry>
+          <material><color rgba="1 0 0 1"/></material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

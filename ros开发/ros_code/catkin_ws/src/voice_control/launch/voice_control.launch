@@ -1,0 +1,5 @@
+<launch>
+  <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+  <node name="voice_control" pkg="voice_control" type="iflytek_voice_control.py"
+        output="screen" launch-prefix="xterm -e"/>
+</launch>

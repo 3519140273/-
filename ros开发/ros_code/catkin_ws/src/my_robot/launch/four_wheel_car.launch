@@ -1,0 +1,26 @@
+<launch>
+  <param name="robot_description"
+         textfile="$(find my_robot)/urdf/four_wheel_car.urdf"/>
+
+  <!-- 四轮控制器（订阅/cmd_vel，发布/joint_states） -->
+  <node name="four_wheel_controller"
+        pkg="my_robot"
+        type="four_wheel_controller.py"
+        output="screen"/>
+
+  <!-- 读取/joint_states，发布TF坐标变换 -->
+  <node name="robot_state_publisher"
+        pkg="robot_state_publisher"
+        type="robot_state_publisher">
+    <param name="publish_frequency" value="50.0"/>
+  </node>
+
+  <!-- 发布 odom -> base_footprint 静态变换 -->
+  <node name="odom_tf" pkg="tf"
+        type="static_transform_publisher"
+        args="0 0 0 0 0 0 odom base_footprint 50"/>
+
+  <!-- RViz -->
+  <node name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find my_robot)/config/four_wheel.rviz"/>
+</launch>
